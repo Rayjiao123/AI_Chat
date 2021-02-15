@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <h1>Welcome to chat room {{room}}</h1>
+
+    <div id = "messages"></div>
+    <div id = "replys"></div>
+
+    <form id='message_input_form'>
+        <input type = "text" placeholder="Enter your message here" id = "message_input">
+        <button type = "submit">Send</button>
+    </form>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script>
+    const socket = io.connect("http://127.0.0.1:5000/")
+    
+        let message_input = document.getElementById('message_input')
+    
+        document.getElementById('message_input_form').onsubmit = function (e){
+            e.preventDefault();
+            let message = message_input.value
+            
+            if (message.length) {
+                socket.emit('send_message', {
+                    
+                    
+                    message: message 
+
+                 })
+
+             }
+
+            socket.emit('reply_message',{
+               
+
+             })
+            message_input.value = '';
+            message_input.focus();
+        }
+    
+        
+     
+
+    
+    
+    socket.on('recieve_message', function(data){
+        console.log(data);
+        const newNode = document.createElement('div')
+        //newNode.innerHTML = `<b>${data.username}</b> ${data.message}`
+        newNode.innerHTML = `<b>${"Ray: "}</b> ${data.message}`
+        document.getElementById('messages').appendChild(newNode);
+    })
+
+    socket.on('reply_message', function(data){
+        console.log(data);
+        const newNode = document.createElement('div')
+        //newNode.innerHTML = `<b>${data.username}</b> ${data.message}`
+        newNode.innerHTML = `<b>${"bot: "}</b> ${data.message}`
+        document.getElementById('replys').appendChild(newNode);
+    })
+    
+</script>
+</html>

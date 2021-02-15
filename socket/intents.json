@@ -1,0 +1,95 @@
+{
+  "intents": [
+    {
+      "tag": "Amazon",
+      "patterns": [
+        "What do you think about the Amazon Stock?",
+        "Should I buy Amazon?",
+        "Is Amazon overperforming?",
+        "Do you like Amazon?",
+        "I think Amazon might be a good buy",
+        "Should I sell my Amazon stocks?",
+        "I'm thinking about buying Amazon",
+        "I am selling Amazon"
+      ],
+      "responses": [
+        "Amazon thrashed the brick-and-mortar retail model with its e-commerce business. It put fellow tech titans to shame when its third-party web hosting unit set the standard for a new cloud computing model. Now it's taking on the nearly $4 trillion health care market, which could keep Amazon stock growing for years — if it succeeds. It is a long term buy in our opinion"
+      ]
+    },
+    {
+      "tag": "Tobuy",
+      "patterns": ["What stocks should I buy?", 
+        "What are some of the good stocks to invest in right now", 
+        "What stocks should I invest in right now?",
+      "What are good stocks",
+      "any stocks to buy now",
+      "Give me some good stocks"
+      ],
+      "responses": [
+        "There are 4 stocks that we like at the moment to invest in. Exxon Mobil (XOM), Bank of America (BAC), American Eagle Outfitters (AEO), United Parcel Service (UPS)"
+        
+      ]
+    },
+    {
+      "tag": "TSLA",
+      "patterns": ["Is it too late to buy Tesla?", 
+        "Should I still buy TSLA now?", 
+        "Is this the highest for Tesla", 
+        "Should I sell or short Telsa?"],
+      "responses": ["Tesla shareholders may want to take a balanced approach with their shares. It's generally not advisable to sell shares of a company operating at its peak. Tesla is not only executing well, but it's also arguably consistently exceeding expectations. The company is expanding with new factories globally, its vehicle sales are soaring, its battery storage business is growing quickly, and its vehicle software and driver-assistance technology are constantly improving. Yet investors should also realize that Tesla's stock price has reached levels that are becoming increasingly difficult to justify."]
+    },
+    {
+      "tag": "gamble",
+      "patterns": [
+        "What are some of the high risk and high return stocks?",
+        "What stocks to gamble on?",
+        "I want to buy high risk stocks with good return"
+      ],
+      "responses": [
+        "On Wall Street, no analyst has a “buy” rating on AMC, while four give it a “hold” rating. Their average price target on the shares is $2.51, according to Tipranks. The stock will likely move down to the $1.55 level or up to $3.50, depending on the market’s optimism about the coronavirus vaccine. If consumers become more confident in the vaccine,  theater attendance would grow, lifting all theater-chain stocks."
+      ]
+    },
+    {
+      "tag": "Outlook",
+      "patterns": [
+        "What's the outlook for stock market in 2021",
+        "What to buy this year",
+        "How's the stock market after covid",
+        "Will stock market go up this year",
+        "How will the stock market go this year"
+      ],
+      "responses": [
+        "The strong gains of 2020 suggest further gains in 2021. In the past, following a year of 15%+ gains (the S&P 500 is up 15% this year as of December 29), the next year is positive roughly 70% of the time with an average gain of +7%, approximately in line with overall annual average stock market performance"
+        
+      ]
+    },
+    {
+      "tag": "hello",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Hey, what's up",
+        "Hey, how you doing"
+      ],
+      "responses": [
+        "Hello, welcome to Ray's RoboAdviser. How can I help you?"
+        
+      ]
+    },
+    {
+      "tag": "best",
+      "patterns": [
+        "Are you good?",
+        "Do you know the stock market",
+        "Are you sure about it",
+        "Do you know for sure",
+        "why should I listen to you"
+        
+      ],
+      "responses": [
+        "Well, I am the best:)"
+        
+      ]
+    }
+  ]
+}
