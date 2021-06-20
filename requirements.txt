@@ -1,5 +1,5 @@
 flask
 flask-socketio
 eventlet
-https://download.pytorch.org/whl/cpu/torch-1.9.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
+cpu/torch-1.9.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
 nltk
