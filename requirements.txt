@@ -3,6 +3,6 @@ flask
 flask-socketio
 eventlet
 torch==1.8.0+cpu
-
+gunicorn
 
 nltk
